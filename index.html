@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+    <link rel="icon" href="./favicon.ico" />
+    <title>Mariela</title>
+  </head>
+  <body>
+    <!-- LOADER -->
+    <div id="loader" class="loader">
+      <img src="./images/loader.gif" alt="Loader" />
+    </div>
+
+    <!-- GO TO TOP BUTTON -->
+    <button onclick="topFunction()" id="top-btn" title="Go to top">
+      <img src="./images/top.svg" alt="Go to top" />
+    </button>
+
+    <!-- CART -->
+    <div class="cart-window" id="cart-window" onclick="closeCart();">
+      <div class="cart" id="cart">
+        <!-- CART NAV -->
+        <div class="cart-nav">
+          <p>Your Cart</p>
+          <a class="cart-close" onclick="closeCart();">
+            <img src="./images/close.svg" alt="Close Button" />
+          </a>
+        </div>
+        <hr />
+        <!-- CART ITEMS -->
+        <div class="cart-items" id="cart-items"></div>
+
+        <hr />
+        <!-- CART CHECKOUT -->
+        <div class="cart-checkout">
+          <div class="checkout-detail">
+            <p class="subtotal">Subtotal</p>
+            <p class="amount" id="subtotal"></p>
+          </div>
+          <div class="checkout-btn" onclick="checkoutBtn();">
+            continue to checkout
+          </div>
+          <div class="checkout-disabled" id="checkout-disabled">
+            Sorry! Payment option is disabled
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="header">
+      <nav>
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+          <img
+            src="./images/logo.svg"
+            alt="logo"
+          />
+        </a>
+        <!-- MENU -->
+        <div class="links">
+          <ul id="menu" class="close">
+            <a href="index.html"><li>Home</li></a>
+            <a href="#about"><li>About me</li></a>
+            <a href="#products"><li>Products</li></a>
+            <a href="#contact"><li>Contact me</li></a>
+          </ul>
+          <div class="burger" onclick="toggleMenu();">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <!-- CART -->
+          <a class="icon" onclick="openCart();">
+            <img src="./images/shopping-cart.svg" alt="cart" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner-section">
+      <div class="banner" id="banner">
+        <div class="hero-banner-card" id="hero-banner-card"></div>
+        <div class="sudo-box"></div>
+        <div class="banner-nav">
+          <a class="banner-back" onclick="changeBanner('back');">
+            <img src="./images/back.svg" alt="back" />
+          </a>
+          <a class="banner-next" onclick="changeBanner('next');">
+            <img src="./images/next.svg" alt="next" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section">
+      <div class="intro">
+        <!-- INTRO DETAILS -->
+        <div class="intro-details">
+          <p class="details-sub">I'm a cushion designer</p>
+          <p class="details-main">
+            Based in San Francisco, California I design trendy and fashion
+            Cushions, since I have memory I always had a tendency to design and
+            illustration.
+          </p>
+          <a href="#about"><div class="details-btn">Learn more</div></a>
+        </div>
+        <!-- INTRO CARDS -->
+        <div class="intro-cards">
+          <div class="intro-card">
+            <img src="./images/aboutme.png" alt="About Me" />
+            <div class="intro-text">
+              <a href="#about"><p class="text-sub">About me</p></a>
+              <a href="#about"><p class="text-btn">Learn more</p></a>
+            </div>
+          </div>
+          <div class="intro-card">
+            <img src="./images/myproducts.png" alt="My Products" />
+            <div class="intro-text">
+              <a href="#product-banner"><p class="text-sub">My products</p></a>
+              <a href="#product-banner"><p class="text-btn">Learn more</p></a>
+            </div>
+          </div>
+          <div class="intro-card">
+            <img src="./images/contactme.png" alt="Contact Me" />
+            <div class="intro-text">
+              <a href="#contact"><p class="text-sub">Contact me</p></a>
+              <a href="#contact"><p class="text-btn">Learn more</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="aboutme-section">
+      <div class="banner" id="about">
+        <div class="about-info">
+          <p class="banner-sub">About me</p>
+          <p class="banner-main">I'm a trendy Cushion Designer</p>
+          <a href="#content"><p class="banner-sub underline">Learn more</p></a>
+        </div>
+        <div class="about-image">
+          <img src="./images/aboutme-large.png" alt="About me" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="content-section">
+      <div class="content_section" id="content">
+        <!-- CARD-1 -->
+        <div class="content-card">
+          <div class="content-body">
+            <p class="content-sub">Beginnings</p>
+            <p class="content-main">
+              Credibly innovate granular internal or organic sources whereas
+              high standards in web-readiness. Energistically scale future-proof
+              core competencies vis-a-vis impactful experiences.
+            </p>
+            <p class="content-main">
+              Dramatically synthesize integrated schemas. with optimal networks.
+            </p>
+          </div>
+          <div class="beginnings-img">
+            <img src="./images/beginning.jpg" alt="Beginnings" />
+          </div>
+        </div>
+        <hr />
+        <!-- CARD-2 -->
+        <div class="content-card">
+          <div class="carrer-img">
+            <img src="./images/carrer.jpg" alt="Carrer" />
+          </div>
+          <div class="content-body">
+            <p class="content-sub">Carrer</p>
+            <p class="content-main">
+              Collaboratively administrate turnkey channels whereas virtual
+              e-tailers.
+            </p>
+            <p class="content-main">
+              Objectively seize scalable metrics whereas proactive e-services
+              seamlessly empower fully researched growth strategies.
+            </p>
+            <p class="content-main">
+              And interoperable internal or “organic” sources.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <!-- CARD-3 -->
+        <div class="content-card">
+          <div class="content-body">
+            <p class="content-sub">Products</p>
+            <p class="content-main">
+              Seamlessly empower fully researched growth strategies and
+              interoperable internal or “organic” sources.
+            </p>
+            <p class="content-main">
+              Credibly innovate granular internal or “organic” sources whereas
+              high standards in web-readiness.
+            </p>
+            <p class="content-main">
+              Energistically scale future-proof core competence
+            </p>
+          </div>
+          <div class="products-img">
+            <img src="./images/products.jpg" alt="Products" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT BANNER -->
+    <section class="productbanner-section">
+      <div class="banner" id="product-banner">
+        <div class="banner-image-2">
+          <img src="./images/hero-3.jpg" alt="hero-image" />
+        </div>
+        <div class="banner-info-2">
+          <p class="banner-sub">New</p>
+          <p class="banner-main">
+            Spring Cushion<br />
+            Collection 2021
+          </p>
+          <a href="#products"><p class="banner-sub underline">Buy now</p></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section">
+      <div class="products" id="products"></div>
+    </section>
+
+    <!-- CONTACT ME -->
+    <section class="contact-section">
+        <div class="contact" id="contact">
+      <div class="contact-details">
+        <div class="contact-detail">
+          <p class="sub">Email</p>
+          <p class="main">support@website.com</p>
+        </div>
+        <div class="contact-detail">
+          <p class="sub">Phone</p>
+          <p class="main">800-123-456</p>
+        </div>
+        <div class="contact-detail">
+          <p class="sub">Address</p>
+          <p class="main">23 Evergreen Street, San Francisco, California USA</p>
+        </div>
+      </div>
+      <div class="contact-me">
+        <p class="sub">Contact me</p>
+        <p class="main">
+          Drop us your message and I'll get back to you as soon as possible.
+        </p>
+        <div class="form">
+          <form
+            class="contact-form"
+            action=""
+            method="post"
+            name="contact-form"
+          >
+            <div class="field">
+              <div class="input">
+                <input
+                  class="form-styling"
+                  type="text"
+                  name="name"
+                  placeholder="your name"
+                />
+              </div>
+              <div class="input">
+                <input
+                  class="form-styling"
+                  type="text"
+                  name="company"
+                  placeholder="your company"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <div class="input">
+                <input
+                  class="form-styling"
+                  type="tel"
+                  name="number"
+                  placeholder="your number"
+                />
+              </div>
+              <div class="input">
+                <input
+                  class="form-styling"
+                  type="email"
+                  name="email"
+                  placeholder="your email"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <div class="input">
+                <textarea
+                  class="form-styling"
+                  rows="4"
+                  cols="50"
+                  placeholder="your message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="btn">Let's talk</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </section>
+  
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <div class="newsletter">
+      <p class="sub">Newsletter</p>
+      <p class="main">Get promotions & updates!</p>
+      <div class="news-form">
+        <form
+          class="newsletter-form"
+          action=""
+          method="post"
+          name="newsletter-form"
+        >
+          <div class="news-input">
+            <input
+              class="news-form-styling"
+              type="text"
+              name="name"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="news-input">
+            <input
+              class="news-form-styling"
+              type="email"
+              name="email"
+              placeholder="Your email"
+            />
+          </div>
+          <div class="news-btn">Subscribe</div>
+        </form>
+      </div>
+    </div>
+    </section>
+    
+
+    <!-- FEATURES -->
+    <section class="features-section">
+      <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <img src="./images/home-icon.svg" alt="Home Icon" />
+        </div>
+        <p class="feature-name">Safe shopping</p>
+        <p class="feature-tag">Buy with confidence</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <img src="./images/shipping-icon.svg" alt="Shipping Icon" />
+        </div>
+        <p class="feature-name">Fast shipping</p>
+        <p class="feature-tag">Get your product fast</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <img src="./images/trust-icon.svg" alt="Trust Icon" />
+        </div>
+        <p class="feature-name">Satisfaction guarantee</p>
+        <p class="feature-tag">Or get your money back</p>
+      </div>
+    </div>
+    </section>
+    
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <!-- FOOTER LOGO -->
+      <a href="index.html" class="footer-logo">
+        <img
+          src="/images/footer-logo.svg"
+          alt="logo"
+        />
+      </a>
+      <!-- FOOTER MENU -->
+      <div class="footer-menu">
+        <ul>
+          <a href="index.html"><li>Home</li></a>
+          <a href="#about"><li>About me</li></a>
+          <a href="#products"><li>Products</li></a>
+          <a href="#contact"><li>Contact me</li></a>
+        </ul>
+      </div>
+      <!-- SOCIAL ICONS -->
+      <div class="social">
+        <a
+          href="#"
+          class="social-icon"
+          target="_blank"
+        >
+          <img src="./images/instagram.svg" alt="Instagram Icon" />
+        </a>
+        <a
+          href="#"
+          class="social-icon"
+          target="_blank"
+        >
+          <img src="./images/linkedin.svg" alt="Linkedin Icon" />
+        </a>
+        <a
+          href="https://github.com/marishka1997"
+          class="social-icon"
+          target="_blank"
+        >
+          <img src="./images/github.svg" alt="Github icon" />
+        </a>
+      </div>
+    </footer>
+    <!-- SCRIPT -->
+    <script src="./scripts/layout.js"></script>
+    <script src="./scripts/homepage.js"></script>
+  </body>
+</html>
