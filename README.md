@@ -3,7 +3,7 @@
 
 ## Description 
 
-A multi-page responsive website for the cushion shop "Mariela", 
+A multi-page adaptive website for the cushion shop "Mariela", 
 which is presents a range of stunning cushions with poetic, floral and 
 glamorous prints, in powder and delicious colours or flashy shades 
 and is known for vibrant, oversized watercolour blooms. 
